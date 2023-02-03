@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+#bgvid {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+  }
+  
+
+
+main{
+    font-size: 20px;
+    width: 40%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    
+}
+
+.search-content{
+    margin-top: 6%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+ .search-content a{
+    color: gray;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 40px;
+    height: 40px;
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;    
+    text-decoration: none;    
+    transition: 400ms;
+    cursor: pointer;
+
+}
+
+
+.search-content a:hover{
+    color: gray;
+    background-color: rgba(105, 103, 103, 0.7);
+    transition: 400ms;
+
+}
+
+h1{
+    font-weight: 500;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+input{
+    color: gray;
+    padding-left: 3%;
+    border: none;
+    border-radius: 20px;
+    width: 75%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+.weather-content{
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+
+.temperature{
+    margin-top: 5%;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.weather-situation{
+    font-size: 1em;
+    font-weight: 300;
+    display: flex;
+    align-items:center;
+
+}
+
+
+img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+#humidity{
+    font-weight: 300;
+}
+
+.data-content{
+    font-size: 1em;
+    display:flex;
+    padding-top: 2%;
+    padding-left: 2%;
+
+}
+
+.data-content a{
+    
+    color: white;
+   padding-right: 2%;
+
+}
+
+@media (max-width: 1200px) {
+    main{
+        width: 350px;
+        font-size: 18px;
+       
+    }
+}

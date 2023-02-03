@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Poppins:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bb55ee501d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <video id="bgvid" playsinline autoplay muted loop>
+        <source src="./videos/chuvavideo_AdobeExpress.mp4" type="video/mp4">
+        <!-- add other sources for different browsers -->
+    </video>
+
+    <main>
+        <section class="search-content">
+            <input id="input" placeholder="Cidade" type="text">
+
+            <a onclick="FindCity()"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+
+        </section>
+
+        <section class="weather-content">
+            <h1 id="city">Mandaguari</h1>
+            <h2 id="real-temperature" >21°C</h2>
+            <h2>Sensação térmica:</h2>
+            <h2 id="thermal-sensation">22°C</h2>
+        
+
+            
+
+            <div class="weather-situation">
+                <img id="img-stats" src="http://openweathermap.org/img/wn/04n@2x.png" alt="">
+                <p id="weather-description"> Nublado</p>
+
+            </div>
+
+            <div class="data-content">
+                <a><i class="fa-sharp fa-solid fa-droplet"></i></a>
+                <p id="humidity"> Humidade: 78%</p>
+            </div>
+
+            <div class="data-content">
+                <a><i class="fa-sharp fa-solid fa-wind"></i></i></a>
+                <p id="wind"> Velocidade do vento: 0.62m/s</p>
+            </div>
+        
+            
+        </section>
+
+
+
+
+
+
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
