@@ -21,8 +21,8 @@ if(data.cod == 200){
    cityName.innerHTML = data.name
    realTemperature.innerHTML = Math.round(data.main.temp - 273.15)+'°C'
    thermalSensation.innerHTML = Math.round(data.main.feels_like - 273.15)+'°C'
-   windVelocity.innerHTML = data.wind.speed+'m/s'
-   humidity.innerHTML = data.main.humidity+'%'
+   windVelocity.innerHTML = "Velocidade do vento: "+data.wind.speed+'m/s'
+   humidity.innerHTML = "Umidade :"+data.main.humidity+'%'
    weatherDescription.innerHTML = data.weather[0].description
     let imgName = data.weather[0].icon
     imgStats.src = `http://openweathermap.org/img/wn/${imgName}@2x.png`
