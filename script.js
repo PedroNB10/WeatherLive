@@ -5,6 +5,7 @@ const cityName = document.getElementById("city");
 const weatherDescription = document.getElementById('weather-description')
 const thermalSensation = document.getElementById('thermal-sensation')
 const imgStats = document.getElementById("img-stats");
+const video = document.getElementById('bgvid')
 
 function displayInfo(data) {
    console.log(data.cod)
@@ -25,10 +26,42 @@ if(data.cod == 200){
    weatherDescription.innerHTML = data.weather[0].description
     let imgName = data.weather[0].icon
     imgStats.src = `http://openweathermap.org/img/wn/${imgName}@2x.png`
+
+    console.log(imgName.substring(0, imgName.length - 1))
+    console.log(typeof(imgName.substring(0, imgName.length - 1)))
+
+    if( imgName.substring(0, imgName.length - 1) =='02' ||
+        imgName.substring(0, imgName.length - 1) =='03' ||
+        imgName.substring(0, imgName.length - 1) =='04' 
+        ){
+        video.setAttribute("src", "./background-videos/clouds.mp4" )
+    }
+    else if(imgName.substring(0, imgName.length - 1) =='09' ||
+            imgName.substring(0, imgName.length - 1) =='10'
+            ){
+    video.setAttribute("src", "./background-videos/rain-video.mp4" )
+   }
+
+    else if(imgName.substring(0, imgName.length - 1) =='13'){
+      video.setAttribute("src", "./background-videos/snow.mp4" )
+    }
+    else if(imgName.substring(0, imgName.length - 1) =='11'){
+      video.setAttribute("src", "./background-videos/lightning.mp4" )
+    }
+    else if(imgName.substring(0, imgName.length - 1) =='50'){
+      video.setAttribute("src", "./background-videos/mist.mp4" )
+    }
+    else if(imgName =='01d'){
+      video.setAttribute("src", "./background-videos/sun.mp4" )
+    }
+    else if(imgName =='01n'){
+      video.setAttribute("src", "./background-videos/night.mp4" )
+    }
+
 }
 
 else{
-   alert('Erro')
+   alert('Cidade não encontrada!')
 }
 
 
